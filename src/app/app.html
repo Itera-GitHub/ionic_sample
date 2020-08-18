@@ -1,0 +1,15 @@
+<ion-menu [content]="content" persistent="true" (ionOpen)="enableSwipe()" (ionClose)="disableSwipe()">
+  <ion-content>
+    <ion-list>
+      <ion-list-header class="menu-label">
+        <img src="../assets/imgs/logo-menu.png">
+      </ion-list-header>
+      <ion-item menuClose  *ngFor="let page of pages" (click)="openPage(page)" class="list-item">
+        <ion-icon name="{{page.icon}}" item-start></ion-icon>{{page.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

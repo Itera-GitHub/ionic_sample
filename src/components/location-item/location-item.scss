@@ -1,0 +1,51 @@
+location-item {
+  background: $white;
+  .details.border {
+    border-bottom: 1px solid #dedede !important;
+  }
+  .location-item {
+    padding-top: 0.5rem;
+    position: relative;
+    ion-icon {
+      color: $secondaryColor;
+      position: absolute;
+      top: 0;
+      left: 0.3rem;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .address {
+      padding-top: 0;
+    }
+    .normal-text {
+      color: $darkColor;
+      font-size: 1.8rem !important;
+    }
+    .distance {
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+    }
+    .margin-location {
+      margin-top: 0.6rem;
+    }
+    .small-text {
+      color: $grey;
+      font-size: 1.35rem !important;
+    }
+    .icon-col {
+      font-size: 3rem;
+      margin-right: 0;
+      .icon {
+        color: $secondaryColor;
+        margin-left: 1rem;
+        width: 55%;
+        height: 55%;
+      }
+    }
+    .carwashes {
+      padding-top: 0.3rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="profileForm">
+    <ion-row>
+      <ion-col col-12 class="input-box-half">
+        <ion-item>
+          <ion-label  position="stacked">Identifier</ion-label>
+          <ion-input type="text" formControlName="imei" name="imei" disabled></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="input-box-half">
+        <ion-item>
+          <ion-label position="stacked">Name</ion-label>
+          <ion-input type="text" formControlName="name" name="name"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input type="text" formControlName="email" name="email"></ion-input>
+        </ion-item>
+        <p *ngIf="profileForm.controls['email'].errors?.pattern && showError" class="input-error">
+          Wrong email
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+
+        <ion-item>
+          <ion-label position="stacked">Phone</ion-label>
+          <ion-input type="text" formControlName="phone" name="phone"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <button ion-button class="button-green" (click)="saveForm()" block>Save</button>
+  </form>
+</ion-content>

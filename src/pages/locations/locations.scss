@@ -1,0 +1,12 @@
+page-locations {
+  ion-list .item {
+    padding-left: 0 !important;
+    .item-inner {
+      padding-right: 0;
+      border-bottom: none !important;
+    }
+    .label {
+      margin: 0;
+    }
+  }
+}

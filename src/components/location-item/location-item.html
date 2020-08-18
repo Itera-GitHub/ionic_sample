@@ -1,0 +1,22 @@
+<div class="location-item">
+  <ion-row>
+    <ion-col col-2 class="icon-col">
+      <ion-icon name="aqua-carwash"></ion-icon>
+    </ion-col>
+    <ion-col col-10 class="details {{isList ? 'border' : ''}}">
+      <ion-row>
+        <ion-col col-8>
+          <div class="normal-text text-wrap"><span >{{locationDetails?.name}}</span></div>
+        </ion-col>
+        <ion-col col-4 class="text-right">
+          <span  *ngIf="locationDetails?.distance" class="small-text distance">{{locationDetails?.distance}} км</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="address">
+          <div class="small-text text-wrap"><span>{{locationDetails?.address}}</span></div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</div>

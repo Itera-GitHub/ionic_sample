@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons start left>
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <location-ifo #locationInfo (showDirections)="showDirections($event)"></location-ifo>
+
+  <div (clickOutside)="hideInfo($event)" id="map_canvas"
+       #map_canvas
+       data-tap-disabled="false">
+  </div>
+
+  <div class="btn-arrow-back" *ngIf="mapProvider.directionsShown" (click)="hideDirections()">
+    <ion-icon name="arrow-back"></ion-icon>
+  </div>
+
+  <div class="btn-find-me" *ngIf="mapProvider.mapReady && userPosition?.lat" (click)="findMe()">
+    <ion-icon name="aqua-centered"></ion-icon>
+  </div>
+
+</ion-content>

@@ -1,0 +1,374 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+body {
+  font-size: 2vw;
+}
+.scroll-content{
+  overflow-y: auto;
+}
+ion-app.md,
+ion-app.ios {
+  font-size: inherit;
+}
+.normal-text {
+  font-size: 1rem!important;
+}
+.text-white {
+  color: $white;
+}
+.back-button {
+  font-size: 2rem;
+}
+.toolbar-background {
+  background-color: $mainColor;
+}
+.toolbar-content {
+  .toolbar-title {
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+.toolbar-title {
+  text-overflow: unset;
+  white-space: unset;
+}
+.back-button {
+  color: $white;
+}
+.list-item .item-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.item-input .input-wrapper {
+  display: block;
+  .label {
+    margin-bottom: 0;
+  }
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom: 1px solid #dedede;
+  box-shadow: none;
+}
+ion-icon {
+  &[class*="aqua-"] {
+    // Instead of using the font-based icons
+    // We're applying SVG masks
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 3rem;
+    height: 3rem;
+  }
+  // custom icons
+  &[class*="aqua-back"] {
+    mask-image: url(../assets/imgs/icon-back.svg);
+  }
+  &[class*="aqua-balance"] {
+    mask-image: url(../assets/imgs/icon-balance.svg);
+  }
+  &[class*="aqua-bonuses"] {
+    mask-image: url(../assets/imgs/icon-bonuses.svg);
+  }
+  &[class*="aqua-carwash-round"] {
+    mask-image: url(../assets/imgs/icon-carwash-2.svg);
+  }
+  &[class*="aqua-carwash"] {
+    mask-image: url(../assets/imgs/icon-carwash-1.svg);
+  }
+  &[class*="aqua-delete"] {
+    mask-image: url(../assets/imgs/icon-delete.svg);
+  }
+  &[class*="aqua-list"] {
+    mask-image: url(../assets/imgs/icon-list.svg);
+  }
+  &[class*="aqua-map"] {
+    mask-image: url(../assets/imgs/icon-map.svg);
+  }
+  &[class*="aqua-menu"] {
+    mask-image: url(../assets/imgs/icon-menu.svg);
+  }
+  &[class*="aqua-profile"] {
+    mask-image: url(../assets/imgs/icon-profile.svg);
+  }
+  &[class*="aqua-centered"] {
+    mask-image: url(../assets/imgs/icon-centered.svg);
+  }
+  &[class*="aqua-no-connection"] {
+    mask-image: url(../assets/imgs/img-no-connection.svg);
+  }
+  &[class*="aqua-balance-history"] {
+    mask-image: url(../assets/imgs/icon-balance-history.svg);
+  }
+  &[class*="aqua-carwash-history"] {
+    mask-image: url(../assets/imgs/icon-carwash-history.svg);
+  }
+}
+ion-icon[name='menu'] {
+  color: $white;
+}
+.list-item {
+  padding-left: 3rem;
+  ion-icon {
+    color: $lightColor;
+  }
+  .item-inner {
+    margin-left: 0.5rem !important;
+    border-bottom: none !important;
+  }
+}
+.menu-label {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  ion-label {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    img {
+      height: 10rem;
+    }
+  }
+}
+.text-wrap {
+  word-break: break-word;
+}
+.button-md,
+.button-ios {
+  margin-top: 1rem;
+  font-weight: 500;
+  height: 4.6rem;
+  &.button-green {
+    color: $white;
+    background-color: $mainColor;
+    border-color: $mainColor;
+  }
+  &.button-dark {
+    color: $white;
+    background-color: $grey;
+    border-color: $grey;
+  }
+}
+
+
+/* Global Alerts Styles */
+.alert-md,
+.alert-ios {
+
+  &.icon-message {
+    &.error .alert-message:before {
+      background: url(../assets/imgs/icon-error.png) center center no-repeat;
+      height: 6rem;
+      width: 6rem;
+      position: absolute;
+      top: 0;
+      left: 41%;
+      content: '';
+      background-size: contain;
+      padding-top: 4rem;
+    }
+    &.success .alert-message:before {
+      background: url(../assets/imgs/icon-check.png) center center no-repeat;
+      height: 6rem;
+      width: 6rem;
+      position: absolute;
+      top: 0;
+      left: 41%;
+      content: '';
+      background-size: contain;
+      padding-top: 4rem;
+    }
+    &.wash .alert-message:before {
+      background: url(../assets/imgs/icon-clock.png) center center no-repeat;
+      height: 5rem;
+      width: 4rem;
+      position: absolute;
+      top: 0;
+      left: 45%;
+      content: '';
+      background-size: contain;
+      padding-top: 4rem;
+    }
+    .alert-head {
+      padding: 0 1.5rem;
+    }
+    .alert-message {
+      padding: 8rem 7rem 2.5rem;
+    }
+  }
+  ion-backdrop {
+    opacity: 0.6 !important;
+  }
+  .alert-wrapper {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0 1.5rem;
+    background: $white;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.25rem 0.1rem rgba(0,0,0,.2);
+  }
+  .alert-head {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+  }
+  .alert-title {
+    color: $darkColor;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    strong {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1;
+      color: $mainColor;
+      font-weight: 400;
+      margin: 0.5rem 0 -0.5rem;
+    }
+  }
+  .alert-message {
+    color: $darkColor;
+    font-size: 1.4rem;
+    font-weight: 400;
+    max-height: none;
+    padding: 0 7rem 2.5rem;
+    text-align: center;
+    line-height: 2;
+  }
+  .alert-input-group {
+    padding: 0 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .alert-input {
+    color: $lightColor;
+    border: 0;
+    border-bottom: 0.075rem solid $lightColor;
+    border-radius: 0;
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+    padding: 0.75rem 1rem;
+    &:focus {
+      margin: 0 0 0.75rem;
+      border-bottom-width: 0.075rem;
+    }
+    &::-webkit-input-placeholder {
+      color: $lightColor;
+    }
+    &::-moz-placeholder {
+      color: $lightColor;
+    }
+    &:-ms-input-placeholder {
+      color: $lightColor;
+    }
+    &:-moz-placeholder {
+      color: $lightColor;
+    }
+  }
+  .alert-button-group {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border-top: 0.1rem solid darken($white, 4.75%);
+  }
+  .alert-button {
+    width: 100%;
+    min-width: 33.3%;
+    margin: 0;
+    display: inline-block;
+    min-height: 1px;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0;
+    color: $mainColor;
+    text-transform: none;
+    height: auto;
+    border-right: none;
+    &.small-btn {
+      width: 33.3%;
+    }
+    &:last-child {
+      border-right: 0;
+      font-weight: normal;
+    }
+    &:nth-child(2) {
+      border-right: 0.2rem solid darken($white, 4.75%);
+      border-left: 0.2rem solid darken($white, 4.75%);
+    }
+    .button-inner {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* IOS Fixes */
+.list-ios {
+  margin: 0;
+  > .item-block:last-child,
+  > .item-wrapper:last-child .item-block {
+    border-bottom: 0;
+  }
+}
+.list-header-ios {
+  border-bottom: none;
+}
+.toolbar-ios {
+  height: 44px + $cordova-ios-statusbar-padding;
+  padding-top: $cordova-ios-statusbar-padding;
+  box-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.15);
+  padding-bottom: 12px;
+  .toolbar-title-ios {
+    font-size: 1.8rem !important;
+    text-align: left;
+  }
+  .toolbar-content-ios .title-ios {
+    padding: 0 0 0 6rem;
+    .toolbar-title-ios {
+      padding-bottom: 1rem;
+    }
+  }
+}
+.back-button-ios {
+  padding-left: 10px;
+  .back-button-icon-ios  + span {
+    display: none;
+  }
+}
+.content-ios:not([no-bounce]) > .scroll-content::before,
+.content-ios:not([no-bounce]) > .scroll-content::after {
+  height: 0;
+}
+.ios .ion-page.show-page ~ .nav-decor {
+  display: none;
+}

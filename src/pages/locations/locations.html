@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Points list</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    *ngIf="locationsList"
+    [(ngModel)]="search"
+    (click)="openSearchBar()"
+    (ionInput)="onInputSearch($event)"
+    (ionCancel)="onCancelSearch($event)">
+  </ion-searchbar>
+  <ion-list>
+    <div class="item" *ngFor="let location of locationsSearchList" (click)="selectLocation(location)">
+      <location-item [locationDetails]="location" [isList]="true"></location-item>
+    </div>
+  </ion-list>
+</ion-content>

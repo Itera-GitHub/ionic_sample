@@ -1,0 +1,10 @@
+<div (clickOutside)="setToBottom($event)" class="vehicle-modal">
+
+  <location-item [locationDetails]="locationDetails"></location-item>
+
+  <ion-row align-items-center [hidden]="!userPosition?.lat">
+    <ion-col col-12>
+      <button class="directions-button button-green" ion-button color="secondary" outline block (click)="addDirections()">Show Directions</button>
+    </ion-col>
+  </ion-row>
+</div>

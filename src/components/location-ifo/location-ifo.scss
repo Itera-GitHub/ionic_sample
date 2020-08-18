@@ -1,0 +1,17 @@
+location-ifo {
+  background: $white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  .vehicle-modal {
+    padding: 0 0.5rem 0.5rem;
+    box-shadow: 0 0 1rem 0.1rem rgba(0,0,0,.2);
+    position: relative;
+    z-index: 2;
+  }
+  .directions-button {
+    margin-top: 0;
+  }
+}
+
